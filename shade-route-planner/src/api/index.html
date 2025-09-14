@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Route Finder</title>
+    <style>
+      /* Make the map fill the screen */
+      #map {
+        height: 100vh;
+        width: 100%;
+      }
+      #panel {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      }
+      input {
+        margin: 5px;
+        padding: 5px;
+      }
+      button {
+        padding: 6px 12px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="panel">
+      <input id="start" type="text" placeholder="Enter start address" size="40">
+      <input id="end" type="text" placeholder="Enter destination address" size="40">
+      <button onclick="calculateRoute()">Show Route</button>
+    </div>
+    <div id="map"></div>
+
+    <!-- Load your app.js -->
+    <script src="app.js"></script>
+
+    <!-- Load Google Maps API (replace YOUR_API_KEY with your key) -->
+    <script async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSsmI-UUgyQ7ABKu-htovHNefCS3Ic1BU&callback=initMap">
+    </script>
+  </body>
+</html>
